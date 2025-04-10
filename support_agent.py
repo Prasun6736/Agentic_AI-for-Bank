@@ -1,10 +1,14 @@
 from pydantic_ai import Agent, RunContext
 from support_models import SupportDependencies, SupportResult
+from dotenv import load_dotenv 
 import os
 
 # Set your Groq API key and base URL as environment variables (works for 0.0.55)
-os.environ["GROQ_API_KEY"] = "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"
+#os.environ["GROQ_API_KEY"] = "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"
 #os.environ["OPENAI_BASE_URL"] = "https://api.groq.com/openai/v1"
+load_dotenv()
+print("Loaded API Key:", os.getenv("GROQ_API_KEY"))
+
 
 support_agent = Agent(
     model="groq:llama3-70b-8192",  # or "llama3-70b-8192"
