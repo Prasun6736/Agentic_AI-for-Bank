@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+# Ignore virtual environment folders
+venv/
+my/
+env/
